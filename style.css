@@ -8,44 +8,70 @@ body {
     background-image: url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-cover-desktop-wallpaper.gif);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 div#weather {
     display: flex;
     flex-wrap: wrap;
-
-
-    }
-
-.weatherdata {
-    background-color: whitesmoke;
-    margin: 25px; 
-    padding:40px; 
-    border-radius: 20px;
-    font-size: 15px;
-    margin-top: 10px;
-
 }
 
+.weatherdata {
+    background-color: rgb(70, 83, 201);
+    margin: 85px; 
+    padding: 50px; 
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+    
+    
+}
+
+
 p {
-        font-size: 10px;
-    }
+    font-size: 20px;
+    color: rgb(240, 154, 42);
+    
+}
 
-.footer footer{
+.footer footer {
     margin-top: 80px;
-    text-align: left;
-    font-size: 15px;
+    text-align: center;
+    font-size: 30px;
     color: rgb(255, 255, 255);
-
 }
 
 .tag {
-    color: #0a0a18e0;
+    color: #000000e0;
     font-size: 50px;
 }
 
 h1 {
     color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.search-container {
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#searchButton {
+    padding: 20px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f55322e0;
+    color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #404074d0;
+}
