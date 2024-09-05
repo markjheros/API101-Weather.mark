@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather Update - Iligan City</title>
+   <link rel="stylesheet" href="style.css">
+
+
+ 
+</head>
+<body>
+   <div class="tag"><h1>WEATHER UPDATE</h1>
+   <div id="weather">
+      <div class="header">
+         <a href="index.html"><img src="weather_logo.png"></a>
+         <div class="searchWrapper">
+             <input type="text" id="cityInput" placeholder="Search City Name">  
+             <button id="searchButton"><i class='bx bx-search-alt-2'></i></button>
+         </div>
+     </div>
+
+   </div>
+  
+   <script>
+document.addEventListener('DOMContentLoaded', async function() {
+   const apiKey = '294c8528852742dcb9100829242208';
+   const cityName = 'Iligan City';
+   const apiEndpoint = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5`;
+
+
+   try {
+       const response = await fetch(apiEndpoint); // Wait for the fetch to complete
+       const weatherData = await response.json(); // Wait for the response to be parsed into JSON
+       
+       //console.log(weatherData);
+
+
+       const weatherContainer = document.getElementById('weather');
+       const temperatureInCelsius = weatherData.current.temp_c;
+       const weatherDescription = weatherData.current.condition.text;
+       const humidityLevel = weatherData.current.humidity;
+
+       weatherData.forecast.forecastday.forEach(element => {
+        
+        console.log(element)
+        weatherContainer.innerHTML += `
+          
+        <div>
+            <div class="weatherdata">
+            <h1>${cityName}</h1>
+            <p><img src="https:${element.day.condition.icon}"</p>
+            <p><strong>Date:</strong> ${element.date}</p>
+            <p><strong>Temperature:</strong> ${element.day.avgtemp_c}</p>
+            <p><strong>Weather:</strong> ${element.day.condition.text}</p>
+            <p><strong>Humidity:</strong> ${element.day.avghumidity}%</p>
+              </div>
+            
+        
+        ` 
+
+
+       });
+
+
+      
+   } catch (error) {
+       const weatherContainer = document.getElementById('weather');
+       weatherContainer.innerHTML = `<p>Unable to retrieve weather data: ${error.message}</p>`;
+   }
+});
+   </script>
+
+<div class="footer">
+   <footer> Copy Rights Reserved @ 8/23/2024 
+    Mark Jheros S. Aliño
+   </footer>
+</div>
+
+</body>
+</html>
+
+
+
+

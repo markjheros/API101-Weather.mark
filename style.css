@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    color: black;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    background-color:  #bcf5f4cc;
+
+}
+
+div#weather {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    }
+
+.weatherdata {
+    background-color: whitesmoke;
+    margin: 25px; 
+    padding:40px; 
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+
+}
+
+p {
+        font-size: 10px;
+    }
+
+.footer footer{
+    margin-top: 80px;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+
+}
+
+.tag {
+    color: #031a2498;
+    font-size: 50px;
+}
+
