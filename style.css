@@ -6,7 +6,9 @@ body {
     text-align: center;
     width: 100%;
     background-image: url(https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-cover-desktop-wallpaper.gif);
-    background-repeat: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 div#weather {
