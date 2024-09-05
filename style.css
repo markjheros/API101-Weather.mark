@@ -41,7 +41,11 @@ p {
 }
 
 .tag {
-    color: #f7f9ffe0;
+    color: #020205e0;
     font-size: 50px;
+}
+
+.tag h1{
+    color:aliceblue;
 }
 
